@@ -1,6 +1,8 @@
 
 
 import numpy as np
+import time
+
 
 def main():
     a = np.arange(15).reshape(3, 5)
@@ -23,6 +25,16 @@ def main():
     print('EMPTY: {}'.format(np.empty((4, 4))))
 
     print(np.arange(12).reshape(4, 3))
+
+    b = np.array([50, 60, 70, 80])
+    a = np.arange((b.shape[0]))
+
+    t1 = time.clock()
+    c = b - a
+    t2 = time.clock()
+    print('Time for element-wise subtraction: {}'.format(t2 - t1))
+
+
 
 
 if __name__ == '__main__':
