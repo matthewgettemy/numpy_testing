@@ -35,6 +35,12 @@ def main():
     print('Time for element-wise subtraction: {}'.format(t2 - t1))
     print(np.sin(c))
 
+    y = np.array([[1, 1], [2, 7]])
+    z = np.array([[2, 3], [1, 1]])
+    print('Element-wise product: {}'.format(y * z))
+    print('Matrix product: {}'.format(y @ z))
+    print('Reverse matrix product: {}'.format(z @ y))
+    print('Different matrix product: {}'.format(y.dot(z)))
 
 
 if __name__ == '__main__':
