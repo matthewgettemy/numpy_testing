@@ -29,11 +29,11 @@ def main():
     b = np.array([50, 60, 70, 80])
     a = np.arange((b.shape[0]))
 
-    t1 = time.clock()
+    t1 = time.perf_counter()
     c = b - a
-    t2 = time.clock()
+    t2 = time.perf_counter()
     print('Time for element-wise subtraction: {}'.format(t2 - t1))
-
+    print(np.sin(c))
 
 
 
